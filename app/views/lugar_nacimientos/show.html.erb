@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre departamento:</strong>
+  <%= @lugar_nacimiento.nombre_departamento %>
+</p>
+
+<p>
+  <strong>Nombre municipio:</strong>
+  <%= @lugar_nacimiento.nombre_municipio %>
+</p>
+
+<p>
+  <strong>Nombre centro poblado:</strong>
+  <%= @lugar_nacimiento.nombre_centro_poblado %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @lugar_nacimiento.nombre %>
+</p>
+
+<%= link_to 'Edit', edit_lugar_nacimiento_path(@lugar_nacimiento) %> |
+<%= link_to 'Back', lugar_nacimientos_path %>

@@ -1,0 +1,36 @@
+<%= simple_form_for(@departamento, :html => { :class => 'form-horizontal', remote: true } ) do |f| %>
+
+  <% if @departamento.errors.any? %>
+	<div id="error_explanation">
+  	<h2><%= pluralize(@departamento.errors.count, "error") %> prohibited this municipio from being saved:</h2>
+
+  	<ul>
+  	<% @departamento.errors.full_messages.each do |message| %>
+    	<li><%= message %></li>
+  	<% end %>
+  	</ul>
+	</div>
+  <% end %>
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Crear nuevo departamento</h3>
+  </div>
+  <div class="panel-body">
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label">Nombre</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :nombre, class: 'form-control' %>
+   	</div>
+  </div>
+
+  <div class="form-group">
+	<div class="col-sm-offset-2 col-sm-10">
+  	<%= f.submit "Guardar", class: "btn btn-sm btn-success" %>
+	</div>
+  </div>
+</div>
+</div>
+
+<% end %>
+

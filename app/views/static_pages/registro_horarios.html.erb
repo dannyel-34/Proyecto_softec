@@ -1,0 +1,115 @@
+<div class="container">
+    
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+ 
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Registrar Fecha de la Jornada  Ocultar/Mostrar
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <form class="form-inline" action="/procesos/consulta" accept-charset="UTF-8" method="get">
+           
+            <label>Fecha:</label>
+            <input  type="date" placeholder="Fecha"  id="datepicker" class="form-control">      
+            
+            <label>Hora:</label>
+            <input  type="time" placeholder="Fecha"  id="datepicker" class="form-control">   
+           
+            <label>Curso: </label>
+            <select name="tabla" id="tabla" class="form-control" id="select1">
+                  <option>Primero</option>
+                  <option>Segundo</option>
+                  <option>Tercero</option>
+                  <option>Cuarto</option>
+                  <option>Quinto</option>
+                  <option>Sexto</option>
+                  <option>Septimo</option>
+                  <option>Octavo</option>
+                  <option>Noveno</option>
+                  <option>Decimo</option>
+                  <option>Once</option>
+            </select>
+            
+            <label>Grado: </label>
+            <select name="tabla" id="tabla" class="form-control" id="select1">
+                 <option>°1</option>
+                 <option>°2</option>
+                 <option>°3</option>
+                 
+            </select>
+            
+            
+            
+            <label>Jornada: </label>
+          
+            <select name="annio" id="annio" class="form-control">
+                 <option value="">Mañana</option>
+                 <option value="">Tarde</option>
+                 <option value="">Noche</option>
+            </select>
+            
+        
+               <button type="button" class="btn btn-primary" >Registrar fecha</button>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+           Registrar Horario de clase Ocultar/Mostrar
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+           <form class="form-inline">
+            
+            <label>Fecha Inicio:</label>
+            <input  type="date" placeholder="Fecha"  id="datepicker" class="form-control">  
+            
+            <label>Fecha Final:</label>
+            <input  type="date" placeholder="Fecha"  id="datepicker" class="form-control">  
+
+            
+            <label>Hora:</label>
+            <input  type="time" placeholder="Fecha"  id="datepicker" class="form-control">  
+            
+        
+            <label>Curso: </label>
+            <select name="tabla" id="tabla" class="form-control" id="select1">
+                  <option>Primero</option>
+                  <option>Segundo</option>
+                  <option>Tercero</option>
+                  <option>Cuarto</option>
+                  <option>Quinto</option>
+                  <option>Sexto</option>
+                  <option>Septimo</option>
+                  <option>Octavo</option>
+                  <option>Noveno</option>
+                  <option>Decimo</option>
+                  <option>Once</option>
+            </select>
+            
+            <button type="button" class="btn btn-primary" >Registrar</button>
+            
+           </form>
+    
+    </div>
+  </div>
+</div>
+     
+    
+    
+
+     
+   
+
+</div>

@@ -1,0 +1,7 @@
+<tr id=<%= "tipo_documento_#{tipo_documento.id}" %>>
+        <td><%= tipo_documento.nombre %></td>
+        <td><%= tipo_documento.sigla %></td>
+        <td><%= link_to 'Mostrar', tipo_documento, remote: true, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Editar', edit_tipo_documento_path(tipo_documento), remote: true, class: "btn btn-warning" %></td>
+        <td><%= link_to 'Eliminar', tipo_documento, method: :delete, remote: true, data: { confirm: 'Estas Seguro?' }, class: "btn btn-danger" %></td>
+</tr>     

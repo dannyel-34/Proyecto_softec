@@ -1,0 +1,151 @@
+<%= simple_form_for(@dato_estudiante, :html => { :class => 'form-horizontal', remote: true } ) do |f| %>
+
+  <% if @dato_estudiante.errors.any? %>
+	<div id="error_explanation">
+  	<h2 class="alert alert-dismissible alert-success"><%= pluralize(@dato_estudiante.errors.count, "error") %> prohibited this municipio from being saved:</h2>
+
+  	<ul>
+  	<% @dato_estudiante.errors.full_messages.each do |message| %>
+    	<li><%= message %></li>
+  	<% end %>
+  	</ul>
+	</div>
+  <% end %>
+  
+  <br>
+  
+  <br>
+  
+  <br>
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel success</h3>
+  </div>
+  <div class="panel-body">
+<div class="form-group has-success">
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Codigo</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :codigo, class: 'form-control', placeholder: "Codigo" %>
+   	</div>
+  </div>
+  </div>
+ 
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Nombre</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :nombre, class: 'form-control', placeholder: "Nombre" %>
+   	</div>
+  </div>
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Apellido</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :apellido, class: 'form-control', placeholder: "Apellido" %>
+   	</div>
+  </div>
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Correo electronico</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :mail, class: 'form-control', placeholder: "Email" %>
+   	</div>
+  </div>
+
+  
+ 
+   <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Tipo documento</label>
+   	<div class="col-md-4">
+      	<%= f.collection_select :pais_id, TipoDocumento.all, :id, :nombre, prompt: "Seleccione tipo documento", class: "form-control" %>
+   	</div>
+  </div>
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Documento identidad</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :doc_identidad , class: 'form-control', placeholder: "Identidad" %>
+   	</div>
+  </div>
+  
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Fecha nacimiento</label>
+   	<div class="col-md-4">
+   	  <%= f.text_field :fch_nacimiento, 'data-provide' => "datepicker", class: "form-control", size: "40", width: "20", heigth: "62" %>
+   	</div>
+  </div>
+
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Curso</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :curso, class: 'form-control', placeholder: "Curso" %>
+   	</div>
+  </div>
+
+
+
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Grado</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :grado, class: 'form-control', placeholder: "Grado" %>
+   	</div>
+  </div>
+  
+
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Pais</label>
+   	<div class="col-md-4">
+        <%= f.collection_select :pais_id, Pai.all, :id, :nombre, class: "form-control lg-6", prompt: "Seleccione Pais" %>
+   	</div>
+  </div>
+
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Municipio</label>
+   	<div class="col-md-4">
+        <%= f.collection_select :municipio_id, Municipio.all, :id, :nombre, class: 'form-control lg-6', prompt: "Seleccione Municipio" %>
+   	</div>
+  </div>
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">direccion</label>
+   	<div class="col-md-4">
+       	<%= f.input_field :direccion, class: 'form-control', placeholder: "direccion" %>
+   	</div>
+  </div>
+
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">telefono</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :telefono, class: 'form-control', placeholder: "telefono" %>
+   	</div>
+  </div>
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Celular</label>
+   	<div class="col-md-4">
+      	<%= f.input_field :celular, class: 'form-control', placeholder: "celular" %>
+   	</div>
+  </div>
+  
+  <div class="form-group">
+   	<label for="name" class="col-sm-3 control-label-left">Genero</label>
+   	<div class="col-md-4">
+      	Masculino: <%= f.radio_button(:genero, true) %>
+        Femenino: <%= f.radio_button(:genero, false) %>
+   	</div>
+  </div>
+
+  <div class="form-group">
+	<div class="col-sm-offset-2 col-sm-10">
+  	<%= f.submit "Guardar", class: "btn btn-sm btn-success" %>
+	</div>
+  </div>
+
+<% end %>
+
+  </div>
+</div>

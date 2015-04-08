@@ -1,0 +1,22 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Buscar alumlunos</h3>
+  </div>
+  <div class="panel-body">
+    <form class="form-inline" action="/procesos/consulta" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+            <label>Nombre del alumno:</label>
+            <input type="text" name="sede" id="sede" value="" class="form-control" size="50" placehoslder="Nombre Alumnos"> 
+            <input type="hidden" name="id_institucion" id="id_institucion">
+             
+             <label>Curso</label>
+    
+             <select name="annio" id="annio" class="form-control"><option value="">Seleccione Año</option></select>
+             
+             <button class="btn btn-success" name="nil">
+                 <%= image_tag("search.png") %>
+             </button>
+  </form>
+  </div>
+</div>
+
+

@@ -1,0 +1,75 @@
+<h1 class="tt2">Listado de pais</h1>
+
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Buscar por pais/mostrar
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+<%= form_tag pais_path, :method => 'get' do %>
+     <% content_tag :label do %>
+         <h5 class="bus">Buscar:</h5>
+         <%= text_field_tag :search, params[:search], id: "inp1", placeholder: "nombres", class: 'form-control lg-6' %>
+     <% end %>
+<% end %>
+
+<button class="btn btn-primary btn-sm" name="nil", id="btn-1">
+    <%= image_tag("search.png") %>
+</button>
+
+
+<br>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Buscar por pais/mostrar
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+<div class="table-responsive">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <%= render @pais %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Pais', new_pai_path, remote: true, class: "btn btn-info" %>
+
+<br>
+
+<br>
+Paises: <%= @pais.count %>
+
+<br>
+<%= will_paginate @pais, renderer: BootstrapPagination::Rails, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente &raquo;', class: 'pagination pagination-sm', id: 'pag-1' %>
+
+</div>
+</div>
+</div>
+</div>
+</div>

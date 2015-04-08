@@ -1,0 +1,22 @@
+<tr id=<%= "dato_estudiante_#{dato_estudiante.id}" %>>
+        <td><%= dato_estudiante.codigo %></td>
+        <td><%= dato_estudiante.nombre %></td>
+        <td><%= dato_estudiante.apellido %></td>
+        <td><%= dato_estudiante.fch_nacimiento %></td>
+        <td><%= calcular_edad(dato_estudiante.fch_nacimiento) %></td>
+        <td><%= dato_estudiante.mail %></td>
+        <td><%= dato_estudiante.doc_identidad %></td>
+        <td><%= dato_estudiante.tipo_doc %></td>
+        <td><%= dato_estudiante.curso %></td>
+        <td><%= dato_estudiante.grado %></td>
+        <td><%= dato_estudiante.pais.nombre %></td>
+        <td><%= dato_estudiante.departamento.nombre %></td>
+        <td><%= dato_estudiante.municipio.nombre %></td>
+        <td><%= dato_estudiante.direccion %></td>
+        <td><%= dato_estudiante.telefono %></td>
+        <td><%= dato_estudiante.celular  %></td>
+        <td><%= mostrar_genero(dato_estudiante.genero) %></td>
+        <td><%= link_to 'Mostrar', dato_estudiante, remote: true, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Editar', edit_dato_estudiante_path(dato_estudiante), remote: true, class="btn btn-warning" %></td>
+        <td><%= link_to 'Eliminar', dato_estudiante, method: :delete, remote :true,  data: { confirm: 'Estas Seguro?' }, remote: true, class: "btn btn-danger" %></td>
+</tr> 

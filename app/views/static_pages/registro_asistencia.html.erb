@@ -1,0 +1,98 @@
+<div class="container">
+    
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+ 
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Seleccionar curso/jornada
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <form class="form-inline" action="/procesos/consulta" accept-charset="UTF-8" method="get">
+           
+            <label>Seleccione curso:</label>
+            <select name="tabla" id="tabla" class="form-control" id="select1">
+                    <option value="">Prescolar</option>
+                    <option value="">Primero</option>
+                    <option value="">Segundo</option>
+                    <option value="">Tercero </option>
+                    <option value="">Cuarto</option>
+                    <option value="">Quinto</option>
+                    <option value="">Sexto</option>
+                    <option value="">Septimo</option>
+                    <option value="">Octavo</option>
+                    <option value="">Noveno</option>
+                    <option value="">Decimo</option>
+                    <option value="">Once</option>
+            </select>
+         
+           
+            <label>Seleccione Grado</label>
+            <select name="tabla" id="tabla" class="form-control" id="select1">
+                    <option value="">°1</option>
+                    <option value="">°2</option>
+                    <option value="">°3</option>
+            </select>
+            
+            <label>Jornada: </label>
+          
+            <select name="annio" id="annio" class="form-control">
+                 <option value="">Mañana</option>
+                 <option value="">Tarde</option>
+                 <option value="">Noche</option>
+            </select>
+          
+            <button type="button" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Importar Datos Ocultar/Mostrar
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+            <form class="form-inline" action="/procesos/consulta" accept-charset="UTF-8" method="get">
+                <div class="form-group">
+                <label for="importar" class="col-sm-1 control-label">Datos a Importar:</label>
+                <div class="col-md-2">
+                 <select name="tabla" id="tabla" class="form-control"><option value="progresoacademico">Progresos Académicos</option>
+                    <option value="">Bitacora de asistencia semanal</option>
+                    <option value="">Segun el curso de la jornada</option>
+                 </select>
+                </div>
+                <label for="name" class="col-sm-1 control-label">Separador de Columna:</label>
+                <div class="col-md-2">
+                    <select name="separador_columna" id="separador_columna" class="form-control">
+                       <option value=";">; (Punto y Coma)</option>
+                       <option value="|">| (Barra)</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+              <span class="btn btn-primary ">
+                <input type="file" name="file" id="file" />
+              </span>
+              </div>
+
+            </form>
+    
+    </div>
+  </div>
+</div>
+     
+    
+    
+
+     
+   
+
+</div>

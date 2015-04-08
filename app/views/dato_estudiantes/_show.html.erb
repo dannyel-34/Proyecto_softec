@@ -1,0 +1,91 @@
+<div class='dato_estudiante'>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @dato_estudiante.codigo %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @dato_estudiante.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @dato_estudiante.apellido %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @dato_estudiante.fch_nacimiento %>
+</p>
+
+<p>
+  <strong>Edad:</strong>
+  <%= calcular_edad(@dato_estudiante.fch_nacimiento) %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @dato_estudiante.mail %>
+</p>
+
+<p>
+  <strong>Doc identidad:</strong>
+  <%= @dato_estudiante.doc_identidad %>
+</p>
+
+<p>
+  <strong>Doc identidad:</strong>
+  <%= @dato_estudiante.tipo_doc %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @dato_estudiante.curso %>
+</p>
+
+<p>
+  <strong>Grado:</strong>
+  <%= @dato_estudiante.grado %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @dato_estudiante.pais %>
+</p>
+
+<p>
+  <strong>Departamento:</strong>
+  <%= @dato_estudiante.departamento %>
+</p>
+
+<p>
+  <strong>Municipio:</strong>
+  <%= @dato_estudiante.municipio.nombre rescue nil %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @dato_estudiante.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @dato_estudiante.telefono %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @dato_estudiante.celular %>
+</p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= mostrar_genero(@dato_estudiante.genero) %>
+</p>
+
+<%= link_to 'Editar', edit_dato_estudiante_path(@dato_estudiante) %> |
+<%= link_to 'Atras', dato_estudiantes_path %>
+</div>

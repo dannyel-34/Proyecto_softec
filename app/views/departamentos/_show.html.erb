@@ -1,0 +1,19 @@
+
+<div class="departamentos">
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Informacion</h3>
+  </div>
+  <div class="panel-body">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @departamento.nombre %>
+</p>
+
+<%= link_to 'Editar', edit_departamento_path(@departamento), class: "btn btn-info btn-sm" %> |
+<%= link_to 'Atras', departamentos_path, class: "btn btn-success btn-sm" %>
+</div>
+</div>
+</div>
